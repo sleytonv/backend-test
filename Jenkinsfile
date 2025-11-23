@@ -6,7 +6,7 @@ pipeline {
         GHCR_IMAGE      = "ghcr.io/sleytonv/backend-test"
         K8S_NAMESPACE   = "sleyton"
         K8S_DEPLOYMENT  = "backend-test"
-        K8S_CONTAINER   = "backend-test"
+        K8S_CONTAINER   = "backend"
     }
 
     stages {
