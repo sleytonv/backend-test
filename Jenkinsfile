@@ -81,7 +81,7 @@ pipeline {
                 sh '''
                   kubectl apply -f kubernetes.yaml
                   kubectl -n ${K8S_NAMESPACE} set image deployment/${K8S_DEPLOYMENT} \
-                     ${K8S_CONTAINER}=${GHCR_IMAGE}:${BUILD_NUMBER}
+                     ${K8S_CONTAINER}=${DOCKERHUB_IMAGE}:${BUILD_NUMBER}
                   kubectl -n ${K8S_NAMESPACE} rollout status deployment/${K8S_DEPLOYMENT}
                 '''
             }
